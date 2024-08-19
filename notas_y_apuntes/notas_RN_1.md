@@ -31,3 +31,7 @@ Red neuronal **feed-forward**
 ![](imgs/2024-08-15-19-15-58-image.png)
 
 Es uno de los primeros modelo de red neurnoales propuesto, en este diseño las neuronas solo pueden conectar sus salidas con las entradas de neuronas que esten en capas siguientes.
+
+
+
+## Clase #3
