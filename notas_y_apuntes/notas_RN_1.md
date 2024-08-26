@@ -77,3 +77,31 @@ el sistema se aproxima a $\pi$ pero nunca llega, pues a medida que se aproxima, 
 En general nos interesara ver que sucede cuando $t \rightarrow \inf$  
 ![[Pasted image 20240826171635.png]]
 
+Nuestra ecuacion diferencial ordinaria guarda información acerca del comportamiento del sistema dinámico para tiempos largos.
+![[Pasted image 20240826180446.png]]
+esto define un campo vectorial donde asocia un vector unidimensional a cada vector unidimensional en R. Esto nos permite interpretar geométricamente la trayectoria del sistema, es decir hacia donde y hasta donde evolucionará la variable x. De modo que en un tiempo infinito el sistema **unidimensional** solo puede encontrarse en:
+- Uno de los puntos fijos
+- en +$\infty$
+- en -$\infty$
+![[Pasted image 20240826180742.png]]
+Si se da en algún t $x(t) = x*$ , entonces quedara en este valor para siempre. 
+
+
+## Clase 5
+### El problema de valor inicial
+dada una ecuacion diferencial 
+$$
+\dot{x} = f(x,t)
+$$
+tenemos infinitas soluciones a partir de la condición inicial $x(t=t_0)=x_0=\alpha$  
+pero podemos determinar una única trayectoria de interés entre las infinitas posibles. 
+![[Pasted image 20240826182003.png]]
+la trayectoria es lo naranja, vemos que se aleja de la solución real. Y ese error se puede estimar a partir de el tamaño del paso h y del método utilizado para calcular dichos pasos. 
+
+Obtenemos dicha trayectoria en un **conjunto de puntos** espaciados por *h* .
+
+![[Pasted image 20240826182324.png]]
+- n: dimension de mi problema, dimension de x. 
+- en general usamos 0 como nuestro valor inicial.
+
+
