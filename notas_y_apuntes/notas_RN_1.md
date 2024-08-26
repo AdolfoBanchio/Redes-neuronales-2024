@@ -30,8 +30,50 @@ Red neuronal **feed-forward**
 
 ![](imgs/2024-08-15-19-15-58-image.png)
 
-Es uno de los primeros modelo de red neurnoales propuesto, en este diseño las neuronas solo pueden conectar sus salidas con las entradas de neuronas que esten en capas siguientes.
+Es uno de los primeros modelo de red neuronales propuesto, en este diseño las neuronas solo pueden conectar sus salidas con las entradas de neuronas que esten en capas siguientes.
 
 ## Clase #3
 
-## Clase #4
+### Sistemas dinámicos
+Un sistema dinámico es cualquier sistema físico cuyo estado evoluciona con el tiempo, nos permiten modelar y ganar capacidad preventiva e la neurociencia teórica y computacional. 
+
+- Sistemas dinámicos continuos: las variables que describen el estado del sistema toman valores continuos y sus razones de cambio se rigen por ecuaciones diferenciales ordinarias
+![[Pasted image 20240826110533.png]]
+- Sistemas dinámicos discretos: las variables que describen el estado son relaciones de recurrencia. La variable independiente de tiempo es discreta. Las variables del estado del sistema pueden ser discretas o continuas. 
+
+Nos vamos a concentrar en **Sistemas dinámicos continuos**
+
+Existen sistemas que estan descriptos por una única variable continua **x**. Que cambia con el tiempo y para ello tenemos la funcion **x(t)** para cierto dominio **D** de la variable **t**.
+$$
+\begin{aligned}
+t \in \mathbb{R} \\
+x(t) \in \mathbb{R}
+\end{aligned}
+$$
+Tener un **modelo** es tener una ecuación que nos permita deducir o aproximar la función **x(t)**. Deducimos como depende la razón de cambio de **x** del tiempo **t**.
+Podemos aproximar **x(t)** a partir de una **ecuación diferencial ordinaria**:
+$$
+\frac{dx(t)}{dt} = f(x(t), t)
+$$
+La razón de cambio puede depender explícitamente de **t** y también implícitamente a través de la variable **x**.
+
+Estos sistemas son unidimensionales pues una única variable describe el estado del sistema,
+
+Si el tiempo t no aparece explicitamente en la razón de cambio **f**, decimos que la ecuación diferencial ordinaria es autónoma. Y el sistema es **AUTÓNOMO**.
+
+Todo sistema no autónomo se puede reducir a un sistema autónomo. Por lo que nos centraremos en sistemas que tienen **n** variables dinámicas y que cada una depende solo del tiempo **t**. En este caso la dinámica de nuestro sistema estará descrita por un sistema de **n** ecuaciones diferenciales ordinarias de la forma:
+![[Pasted image 20240826113219.png]]
+
+## Clase 4
+En nestros sitemas dinamicos donde la razon de cambio esta representado por una funcion f, que depende de x(t), con t el tiempo y variable independiente. Nosotros podemos representarla geoemetricamente y ver que sucedera con el proximo valor de x. 
+![[Pasted image 20240826165639.png]]
+Las raices de la funcion **f(x)** se denominan **puntos fijos** del sistema. si en t=0 la variable x (osea x(0)) esta en ese valor, entonces se quedara alli para siempre. Pero si nos ponemos cerca de estos puntos fijos, vemos que hay algunos que atraen a ciertas posiciones del dominio de f y son **ATRACTORES** o **ESTABLES**. Y otros que repelen trayectorias y son **REPULSORES** o **INESTABLES**. 
+![[Pasted image 20240826170138.png]]
+en este grafico se esta graficando la razon de cambio de x en función de x(t)
+Veamos que pasa si en x(0)=$\pi /4$  
+![[Pasted image 20240826171210.png]]
+el sistema se aproxima a $\pi$ pero nunca llega, pues a medida que se aproxima, la velocidad (razón de cambio) se acerca y tiende a 0. 
+
+En general nos interesara ver que sucede cuando $t \rightarrow \inf$  
+![[Pasted image 20240826171635.png]]
+
