@@ -85,8 +85,10 @@ esto define un campo vectorial donde asocia un vector unidimensional a cada vect
 - en -$\infty$
 ![[Pasted image 20240826180742.png]]
 Si se da en algún t $x(t) = x*$ , entonces quedara en este valor para siempre. 
+Para ciertos puntos fijos se puede decir que los valores cercanos **EMERGEN** o **CONVERGEN** 
+![[Pasted image 20240828135219.png]] ![[Pasted image 20240828135231.png]]
 
-
+Algunos puntos pueden ser **estables** o **inestables** segun de que lado se aproximen. 
 ## Clase 5
 ### El problema de valor inicial
 dada una ecuacion diferencial 
@@ -103,5 +105,6 @@ Obtenemos dicha trayectoria en un **conjunto de puntos** espaciados por *h* .
 ![[Pasted image 20240826182324.png]]
 - n: dimension de mi problema, dimension de x. 
 - en general usamos 0 como nuestro valor inicial.
-
+![[Pasted image 20240828135828.png]]
+En general, alcanza que la razón de cambio (el lado derecho de la EDO) sea una función "un poco suave" para que la solución exista y sea única. Es decir, no existen dos trayectorias que se crucen en un mismo instante t, pues eso supondria que existen dos razones de cambio diferentes. 
 
