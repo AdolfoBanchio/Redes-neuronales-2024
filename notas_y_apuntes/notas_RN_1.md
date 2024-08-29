@@ -106,5 +106,6 @@ Obtenemos dicha trayectoria en un **conjunto de puntos** espaciados por *h* .
 - n: dimension de mi problema, dimension de x. 
 - en general usamos 0 como nuestro valor inicial.
 ![[Pasted image 20240828135828.png]]
-En general, alcanza que la razón de cambio (el lado derecho de la EDO) sea una función "un poco suave" para que la solución exista y sea única. Es decir, no existen dos trayectorias que se crucen en un mismo instante t, pues eso supondria que existen dos razones de cambio diferentes. 
+En general, alcanza que la razón de cambio (el lado derecho de la EDO) sea una función "un poco suave" para que la solución exista y sea única. Es decir, no existen dos trayectorias que se crucen en un mismo instante t, pues eso supondría que existen dos razones de cambio diferentes. 
 
+## Clase 6
