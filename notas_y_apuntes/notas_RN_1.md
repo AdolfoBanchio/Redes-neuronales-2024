@@ -109,3 +109,37 @@ Obtenemos dicha trayectoria en un **conjunto de puntos** espaciados por *h* .
 En general, alcanza que la razón de cambio (el lado derecho de la EDO) sea una función "un poco suave" para que la solución exista y sea única. Es decir, no existen dos trayectorias que se crucen en un mismo instante t, pues eso supondría que existen dos razones de cambio diferentes. 
 
 ## Clase 6
+
+
+## Clase 7
+
+### Bifurcaciones y parámetros
+Analizamos las bifurcaciones para EDOs unidimensionales. 
+Veamos como ejemplo la funcion $$\dot{x} = r+x^2$$
+En este caso, el r sera un parametro **externo** al sistema. 
+![[Pasted image 20240905183648.png]]
+En este caso, los diferentes valores de r nos da diferentes puntos criticos de la ecuación diferencial. Lo que buscamos es encontrar el punto tal que es el ultimo valor de x(t) tal que $\dot{x}$ tiene dos puntos criticos. En este ejemplo vemos que para r mayor que 0 la ecuación diferencial tiene un punto estable. Cuando pasa el 0, estos puntos x* se bifurcan. Por lo que **r=0** es nuestro $r_c$ . 
+
+![[Pasted image 20240905185155.png]]
+#### Formas normales
+Existen funciones que son mas difíciles de resolver para ello buscamos llevarlo a formas normales.
+
+Por el teorema de Taylor, podemos expresar cualquier función infinita en una serie de polinomios para poder obtener una aproximación en un intervalo especifico sabiendo de cuanto es el error. 
+
+De esta forma podemos obtener una aproximación polinomica cuando los valores de x esten cercanos a x* y $r_c$
+
+	Para obtener x* y r_c debo primero igualar la ecuacion diferencial a 0 y despejar x(t) y quedara algo en funcion de mi parametro r. De ahi a partir de las graficas debo encontrar cual es el r_c
+
+
+![[Pasted image 20240905185602.png]]
+Para este caso, el punto critico sera cuando r este cercano a 1. 
+
+Esto nos dice que muchas ecuaciones diferenciales no polinomiales con diferentes parametros de condicion inicial, Podemos mediante series de Taylor llevarlos con un correcto cambio de variables a expresiones polinomicas mas facil de interpretar.
+COMO?
+![[Pasted image 20240905190232.png]]
+Desarrollo la serie de Taylor centrada en  **x**** y $r_c$ (Dos dimensiones) .
+![[Pasted image 20240905190505.png]]
+
+De esta forma puedo obtener una función mas sencilla para poder evaluar la ecuación diferencial al rededor de mi parámetro r y mi punto critico **x**** de interés.
+
+En general estas formas normales tendrán una forma polinomica mas alguna dependencia con el parámetro r. (Siempre para obtener esta forma normal debo tener mi x* y $r_c$)
