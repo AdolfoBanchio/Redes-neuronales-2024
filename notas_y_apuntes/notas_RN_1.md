@@ -110,8 +110,9 @@ En general, alcanza que la razón de cambio (el lado derecho de la EDO) sea una 
 
 ## Clase 6
 
+## Clase 7 (invitado)
 
-## Clase 7
+## Clase 8
 
 ### Bifurcaciones y parámetros
 Analizamos las bifurcaciones para EDOs unidimensionales. 
@@ -144,3 +145,21 @@ De esta forma puedo obtener una función mas sencilla para poder evaluar la ecua
 
 En general estas formas normales tendrán una forma polinomica mas alguna dependencia con el parámetro r. (Siempre para obtener esta forma normal debo tener mi x* y $r_c$)
 
+Existen diferentes tipos de bifurcaciones que representan diferentes comportamientos de sistemas
+
+## Clase 9 
+Sistemas de ecuaciones diferenciales BIDIMENSIONALES.
+
+Tener sistemas de dos dimensiones, nos permite tener soluciones **oscilatorias**. En una dimension cuando tenemos un punto fijo, solo podemos aproximarnos a el desde un lado y quedarnos alli. Con dos dimensiones podemos tener una variable fija y otra oscilando.
+Nuestro sistemas tendran la forma
+$$
+\begin{align}
+\dot{x_1} = f_1(x_1,x_2) \\
+\dot{x_2} = f_2(x_1,x_2)
+\end{align}
+$$
+![[Pasted image 20240909181614.png]]
+
+En estos sistemas nuestro **punto fijo** sera $\bar{x}* = (x*,y*)$ tal que al evaluar las funciones $f_1,f_2$ en dichos valores las razones de cambio permanecen en 0.
+
+Las ecuaciones bidimensionales no suelen tener soluciones analíticas. 
