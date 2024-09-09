@@ -118,7 +118,7 @@ Analizamos las bifurcaciones para EDOs unidimensionales.
 Veamos como ejemplo la funcion $$\dot{x} = r+x^2$$
 En este caso, el r sera un parametro **externo** al sistema. 
 ![[Pasted image 20240905183648.png]]
-En este caso, los diferentes valores de r nos da diferentes puntos criticos de la ecuación diferencial. Lo que buscamos es encontrar el punto tal que es el ultimo valor de x(t) tal que $\dot{x}$ tiene dos puntos criticos. En este ejemplo vemos que para r mayor que 0 la ecuación diferencial tiene un punto estable. Cuando pasa el 0, estos puntos x* se bifurcan. Por lo que **r=0** es nuestro $r_c$ . 
+En este caso, los diferentes valores de r nos da diferentes puntos criticos de la ecuación diferencial. Lo que buscamos es encontrar el punto ($r_c$)tal que es el ultimo valor de x(t) tal que $\dot{x}$ tiene dos puntos criticos. En este ejemplo vemos que para r mayor que 0 la ecuación diferencial tiene un punto estable. Cuando pasa el 0, estos puntos x* se bifurcan. Por lo que **r=0** es nuestro $r_c$ . 
 
 ![[Pasted image 20240905185155.png]]
 #### Formas normales
@@ -126,7 +126,7 @@ Existen funciones que son mas difíciles de resolver para ello buscamos llevarlo
 
 Por el teorema de Taylor, podemos expresar cualquier función infinita en una serie de polinomios para poder obtener una aproximación en un intervalo especifico sabiendo de cuanto es el error. 
 
-De esta forma podemos obtener una aproximación polinomica cuando los valores de x esten cercanos a x* y $r_c$
+De esta forma podemos obtener una aproximación polinomica cuando los valores de x esten cercanos a x* dado un cierto $r_c$
 
 	Para obtener x* y r_c debo primero igualar la ecuacion diferencial a 0 y despejar x(t) y quedara algo en funcion de mi parametro r. De ahi a partir de las graficas debo encontrar cual es el r_c
 
@@ -143,3 +143,4 @@ Desarrollo la serie de Taylor centrada en  **x**** y $r_c$ (Dos dimensiones) .
 De esta forma puedo obtener una función mas sencilla para poder evaluar la ecuación diferencial al rededor de mi parámetro r y mi punto critico **x**** de interés.
 
 En general estas formas normales tendrán una forma polinomica mas alguna dependencia con el parámetro r. (Siempre para obtener esta forma normal debo tener mi x* y $r_c$)
+
