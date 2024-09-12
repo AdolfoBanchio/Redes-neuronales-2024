@@ -146,7 +146,8 @@ De esta forma puedo obtener una función mas sencilla para poder evaluar la ecua
 En general estas formas normales tendrán una forma polinomica mas alguna dependencia con el parámetro r. (Siempre para obtener esta forma normal debo tener mi x* y $r_c$)
 
 Existen diferentes tipos de bifurcaciones que representan diferentes comportamientos de sistemas
-
+![[Pasted image 20240912155255.png]]
+En este ejemplo, a partir de cierto valor del parametro $\beta$ , nos econtramos con que tenemos dos posibles valores de x que se estabilizan. 
 ## Clase 9 
 Sistemas de ecuaciones diferenciales BIDIMENSIONALES.
 
@@ -158,8 +159,34 @@ $$
 \dot{x_2} = f_2(x_1,x_2)
 \end{align}
 $$
+Donde $x_1(t),x_2(t)$ son mis funciones incógnitas.
+
 ![[Pasted image 20240909181614.png]]
+El vector representa el punto en el plano y el vector $\dot{\overline{x}}$ representa la velocidad en ese punto.
+
+Al igual que en las ecuaciones unidimensionales, tambien existe:
+![[Pasted image 20240912155719.png]]
 
 En estos sistemas nuestro **punto fijo** sera $\bar{x}* = (x*,y*)$ tal que al evaluar las funciones $f_1,f_2$ en dichos valores las razones de cambio permanecen en 0.
 
-Las ecuaciones bidimensionales no suelen tener soluciones analíticas. 
+Ahora pasamos a describir el problema desde dicho punto fijo. Es decir, "corremos" el eje de coordenadas y mantenemos nuestro centro en dicho punto critico.
+$$
+\begin{align}
+\dot{x} &= f(x,y) \\
+\dot{y} &= g(x,y) \\
+\end{align}
+$$
+$$\text{Reescribimos nuestras funciones x e y}$$
+$$
+\begin{align}
+x = x* + u &\qquad \dot{x*} = \dot{u} \\
+y = y* + v &\qquad \dot{y*} = \dot{v} \\
+\end{align}
+$$
+![[Pasted image 20240912160509.png]]
+![[Pasted image 20240912160523.png]]![[Pasted image 20240912160536.png]]
+Y asi formamos la matriz jacobiana asociada al sistema dinamico. Por lo que podemos linealizar el sistema alrededor del punto fijo.
+
+Una matriz jacobiana esta formada por las derivadas parciales de una funcion de n variables. Esta tiene tamaño nxn.
+
+## Clase 10
