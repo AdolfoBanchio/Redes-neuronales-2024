@@ -190,3 +190,6 @@ Y asi formamos la matriz jacobiana asociada al sistema dinamico. Por lo que pode
 Una matriz jacobiana esta formada por las derivadas parciales de una funcion de n variables. Esta tiene tamaño nxn.
 
 ## Clase 10
+
+## Clase 11
+
