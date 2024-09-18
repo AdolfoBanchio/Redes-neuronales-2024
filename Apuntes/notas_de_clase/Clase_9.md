@@ -2,15 +2,17 @@
 
 Sistemas de ecuaciones diferenciales BIDIMENSIONALES.
 Nuestro sistemas tendran la forma
+
 $$
 \begin{align*}
 \dot{x_1} = f_1(x_1,x_2) \\
 \dot{x_2} = f_2(x_1,x_2)
 \end{align*}
 $$
+
 Lo que queremos encontrar son dos funciones $x_1(t),x_2(t)$ . En este sistema, estas funciones estan acopladas. Entonces ahora lo que buscamos son dos funciones que al ser derivadas con respecto al tiempo nos den $f_1, f_2$
 
-Tener sistemas de dos dimensiones, nos permite tener soluciones **oscilatorias**. En una dimension cuando tenemos un punto fijo, solo podemos aproximarnos a el desde un lado y quedarnos alli. Con dos dimensiones podemos tener una variable fija y otra oscilando.
+Tener sistemas de dos dimensiones, nos permite tener soluciones **oscilatorias**. En una dimension cuando tenemos un punto fijo, solo podemos aproximarnos a el desde un lado y quedarnos allí. Con dos dimensiones podemos tener una variable fija y otra oscilando.
 Donde $x_1(t),x_2(t)$ son mis funciones incógnitas.
 
 ![Pasted image 20240909181614 1.png](imgs/Pasted%20image%2020240909181614%201.png)
@@ -35,14 +37,14 @@ f(x*,y*) = 0 \\ g(x*,y*) = 0
 \end{align*}
 $$
 
-Es decir, "corremos" el eje de coordenadas y mantenemos nuestro centro en dicho punto critico.
-
 $$
 \begin{align*}
 \dot{x} &= f(x,y) \\
 \dot{y} &= g(x,y) \\
 \end{align*}
 $$
+"corremos" el eje de coordenadas y mantenemos nuestro centro en dicho punto critico.
+
 $$\text{Reescribimos nuestras funciones x e y}$$
 $$
 \begin{align*}
@@ -61,8 +63,10 @@ Como $\dot{x} = f(x,y)$ , usando las igualdades anteriores puedo reescribir (ree
 y eliminando el resto me quedo con que:
 
 $$
+\begin{align*}
 \dot{u} \approx u\frac{df}{dx}_{x*,y*} + v\frac{df}{dy}_{x*,y*} \\
 \dot{v} \approx u\frac{dg}{dx}_{x*,y*} + v\frac{dg}{dy}_{x*,y*} \\
+\end{align*}
 $$
 
 Y de esta forma tengo un sistema de ecuaciones diferenciales acopladas lineal. que lo puedo escribir:

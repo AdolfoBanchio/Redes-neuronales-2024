@@ -271,6 +271,9 @@ Ahora queremos encontrar un sistema de coordenadas (rotando y trasladando) que n
 
 Encontrar el determinante (y los auto-vectores y auto-valores) me permite poder **diagonalizar** la matriz A de forma que desde ese eje de coordenadas, yo veo que mi sistema se a **desacoplado** es decir no dependen entre si.
 
+Los autovalores me diran si el punto que tengo es atractor o repulsor
+Y los autovectores me daran las direcciones.
+
 ## Clase 10
 
 ## Clase 11
