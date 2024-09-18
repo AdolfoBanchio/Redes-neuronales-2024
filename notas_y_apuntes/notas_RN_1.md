@@ -248,10 +248,10 @@ Como $\dot{x} = f(x,y)$ , usando las igualdades anteriores puedo reescribir (ree
 
 y eliminando el resto me quedo con que:
 
-$$\begin{align*}
+$$
 \dot{u} \approx u\frac{df}{dx}_{x*,y*} + v\frac{df}{dy}_{x*,y*} \\
 \dot{v} \approx u\frac{dg}{dx}_{x*,y*} + v\frac{dg}{dy}_{x*,y*} \\
-\end{align*}$$
+$$
 
 Y de esta forma tengo un sistema de ecuaciones diferenciales acopladas lineal. que lo puedo escribir:
 
