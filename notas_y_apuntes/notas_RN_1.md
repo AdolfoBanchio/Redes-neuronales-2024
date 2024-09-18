@@ -48,10 +48,10 @@ Nos vamos a concentrar en **Sistemas dinámicos continuos**
 
 Existen sistemas que estan descriptos por una única variable continua **x**. Que cambia con el tiempo y para ello tenemos la funcion **x(t)** para cierto dominio **D** de la variable **t**.
 $$
-\begin{aligned}
+\begin{align*}
 t \in \mathbb{R} \\
 x(t) \in \mathbb{R}
-\end{aligned}
+\end{align*}
 $$
 Tener un **modelo** es tener una ecuación que nos permita deducir o aproximar la función **x(t)**. Deducimos como depende la razón de cambio de **x** del tiempo **t**.
 Podemos aproximar **x(t)** a partir de una **ecuación diferencial ordinaria**:
@@ -183,7 +183,9 @@ De esta forma puedo obtener una función mas sencilla para poder evaluar la ecua
 En general estas formas normales tendrán una forma polinomica mas alguna dependencia con el parámetro r. (Siempre para obtener esta forma normal debo tener mi x* y $r_c$)
 
 Existen diferentes tipos de bifurcaciones que representan diferentes comportamientos de sistemas
+
 ![Pasted image 20240912155255.png](imgs/Pasted%20image%2020240912155255.png)
+
 En este ejemplo, a partir de cierto valor del parametro $\beta$ , nos econtramos con que tenemos dos posibles valores de x que se estabilizan.
 
 ## Clase 9
@@ -191,10 +193,10 @@ En este ejemplo, a partir de cierto valor del parametro $\beta$ , nos econtramos
 Sistemas de ecuaciones diferenciales BIDIMENSIONALES.
 Nuestro sistemas tendran la forma
 $$
-\begin{align}
+\begin{align*}
 \dot{x_1} = f_1(x_1,x_2) \\
 \dot{x_2} = f_2(x_1,x_2)
-\end{align}
+\end{align*}
 $$
 Lo que queremos encontrar son dos funciones $x_1(t),x_2(t)$ . En este sistema, estas funciones estan acopladas. Entonces ahora lo que buscamos son dos funciones que al ser derivadas con respecto al tiempo nos den $f_1, f_2$
 
@@ -226,17 +228,17 @@ $$
 Es decir, "corremos" el eje de coordenadas y mantenemos nuestro centro en dicho punto critico.
 
 $$
-\begin{align}
+\begin{align*}
 \dot{x} &= f(x,y) \\
 \dot{y} &= g(x,y) \\
-\end{align}
+\end{align*}
 $$
 $$\text{Reescribimos nuestras funciones x e y}$$
 $$
-\begin{align}
+\begin{align*}
 x = x* + u &\qquad \dot{x} = \dot{u} \\
 y = y* + v &\qquad \dot{y} = \dot{v} \\
-\end{align}
+\end{align*}
 $$
 
 ![Pasted image 20240917202450.png](imgs/Pasted%20image%2020240917202450.png)
