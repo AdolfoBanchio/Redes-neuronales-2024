@@ -210,6 +210,7 @@ Lo que vamos a hacer es obtener aproximaciones de las funciones $x_1,x_2$ en dif
 El tiempo t parametriza la curva pero no aparece explicitamente. También se puede ver como $\dot{\overline{x}}(t)$ representa la velocidad de cambio de la curva.
 
 Al igual que en las ecuaciones unidimensionales, también existe:
+
 ![Pasted image 20240912155719.png](imgs/Pasted%20image%2020240912155719.png)
 
 En estos sistemas nuestro **punto fijo** sera $\bar{x}* = (x*,y*)$ tal que al evaluar las funciones $f_1,f_2$ en dichos valores las razones de cambio permanecen en 0.
@@ -246,12 +247,12 @@ Como $\dot{x} = f(x,y)$ , usando las igualdades anteriores puedo reescribir (ree
 ![alt text](imgs/Pasted%20image%2020240917203349.png)
 
 y eliminando el resto me quedo con que:
-$$
-\begin{align*}
+
+$$\begin{align*}
 \dot{u} \approx u\frac{df}{dx}_{x*,y*} + v\frac{df}{dy}_{x*,y*} \\
 \dot{v} \approx u\frac{dg}{dx}_{x*,y*} + v\frac{dg}{dy}_{x*,y*} \\
-\end{align*}
-$$
+\end{align*}$$
+
 Y de esta forma tengo un sistema de ecuaciones diferenciales acopladas lineal. que lo puedo escribir:
 
 ![20240917204118](imgs/Pasted%20image%2020240917204118.png)
