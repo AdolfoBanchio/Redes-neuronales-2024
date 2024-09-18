@@ -6,7 +6,7 @@ La nerona de McCulloch y Pitts (1943)
 
 La neurona toma como inputs las salidas de algunas de las neuronas de la capa anterior, todas ponderadas con algun peso asignado. Luego, esta realiza la suma de cada entrada ponderada con su peso. Y evalua una **funcion de activación** para decidir la salida de la neurona.
 
-![](imgs/2024-08-15-19-04-30-image.png)
+![](2024-08-15-19-04-30-image.png)
 
 donde
 
@@ -28,7 +28,7 @@ Las redes neuronales se miden con el numero de capas (desde la siguiente a la en
 
 Red neuronal **feed-forward**
 
-![](imgs/2024-08-15-19-15-58-image.png)
+![](2024-08-15-19-15-58-image.png)
 
 Es uno de los primeros modelo de red neuronales propuesto, en este diseño las neuronas solo pueden conectar sus salidas con las entradas de neuronas que esten en capas siguientes.
 
@@ -72,7 +72,7 @@ Todo sistema no autónomo se puede reducir a un sistema autónomo. Por lo que no
 
 En nestros sitemas dinamicos donde la razon de cambio esta representado por una funcion f, que depende de x(t), con t el tiempo y variable independiente. Nosotros podemos representarla geoemetricamente y ver que sucedera con el proximo valor de x.
 
-![Pasted image 20240826165639.png](imgs/Pasted%20image%2020240826165639.png)
+![Pasted image 20240826165639.png](Pasted%20image%2020240826165639.png)
 
 Las raices de la funcion **f(x)** se denominan **puntos fijos** del sistema. si en t=0 la variable x (osea x(0)) esta en ese valor, entonces se quedara alli para siempre. Pero si nos ponemos cerca de estos puntos fijos, vemos que hay algunos que atraen a ciertas posiciones del dominio de f y son **ATRACTORES** o **ESTABLES**. Y otros que repelen trayectorias y son **REPULSORES** o **INESTABLES**.
 
