@@ -194,8 +194,6 @@ Sistemas de ecuaciones diferenciales BIDIMENSIONALES.
 
 Nuestro sistemas tendran la forma
 
-  
-
 $$
 
 \begin{align*}
@@ -208,49 +206,27 @@ $$
 
 $$
 
-  
-
 Lo que queremos encontrar son dos funciones $x_1(t),x_2(t)$ . En este sistema, estas funciones estan acopladas. Entonces ahora lo que buscamos son dos funciones que al ser derivadas con respecto al tiempo nos den $f_1, f_2$
-
-  
 
 Tener sistemas de dos dimensiones, nos permite tener soluciones **oscilatorias**. En una dimension cuando tenemos un punto fijo, solo podemos aproximarnos a el desde un lado y quedarnos allí. Con dos dimensiones podemos tener una variable fija y otra oscilando.
 
 Donde $x_1(t),x_2(t)$ son mis funciones incógnitas.
 
-  
-
 ![Pasted image 20240909181614 1.png](imgs/Pasted%20image%2020240909181614%201.png)
-
-  
 
 Lo que vamos a hacer es obtener aproximaciones de las funciones $x_1,x_2$ en diferentes tiempos t para poder asi reconstruir la **trayectoria** del sistema.
 
-  
-
 ![Pasted image 20240917200716.png](imgs/Pasted%20image%2020240917200716.png)
-
-  
 
 El tiempo t parametriza la curva pero no aparece explicitamente. También se puede ver como $\dot{\overline{x}}(t)$ representa la velocidad de cambio de la curva.
 
-  
-
 Al igual que en las ecuaciones unidimensionales, también existe:
-
-  
 
 ![Pasted image 20240912155719 1.png](imgs/Pasted%20image%2020240912155719%201.png)
 
-  
-
 En estos sistemas nuestro **punto fijo** sera $\bar{x}* = (x*,y*)$ tal que al evaluar las funciones $f_1,f_2$ en dichos valores las razones de cambio permanecen en 0.
 
-  
-
 Ahora pasamos a describir el problema desde dicho punto fijo de manera generalizada, dado un punto fijo sabremos que ($f_1 = f, f_2=g$)
-
-  
 
 $$
 
@@ -261,8 +237,6 @@ f(x*,y*) = 0 \\ g(x*,y*) = 0
 \end{align*}
 
 $$
-
-  
 
 $$
 
@@ -278,8 +252,6 @@ $$
 
 "corremos" el eje de coordenadas y mantenemos nuestro centro en dicho punto critico.
 
-  
-
 $$\text{Reescribimos nuestras funciones x e y}$$
 
 $$
@@ -294,25 +266,15 @@ y = y* + v &\qquad \dot{y} = \dot{v} \\
 
 $$
 
-  
-
 ![Pasted image 20240917202450.png](imgs/Pasted%20image%2020240917202450.png)
-
-  
 
 De esta forma podemos describir como se comporta el sistema al rededor de cada punto fijo.
 
 Como $\dot{x} = f(x,y)$ , usando las igualdades anteriores puedo reescribir (reemplazando correctamente, y utilizando taylor para representar las funciones f y g)
 
-  
-
 ![alt text](imgs/Pasted%20image%2020240917203349%201.png)
 
-  
-
 y eliminando el resto me quedo con que:
-
-  
 
 $$
 
@@ -325,8 +287,6 @@ $$
 \end{align*}
 
 $$
-
-  
 
 Y de esta forma tengo un sistema de ecuaciones diferenciales acopladas lineal. que lo puedo escribir:
 
@@ -346,13 +306,14 @@ Ahora queremos encontrar un sistema de coordenadas (rotando y trasladando) que n
 Encontrar el determinante (y los auto-vectores y auto-valores) me permite poder **diagonalizar** la matriz A de forma que desde ese eje de coordenadas, yo veo que mi sistema se a **desacoplado** es decir no dependen entre si.
 
 ### Caso particular matriz diagonal
+
 Supongamos que tenemos un sistema bidimensional linealizado:
 
 ![](imgs/Pasted%20image%2020240919103149.png)
 
 Donde a,b,c,d corresponden a las derivadas parciales.
 
-Si consideramos el caso particular donde mi sistema esta desacoplado (c=d=0) entonces nos encontraremos donde tenemos dos soluciones que describiran el comportamiento de mi sistema bidimensional cerca del punto fijo de la siguiente manera. 
+Si consideramos el caso particular donde mi sistema esta desacoplado (c=d=0) entonces nos encontraremos donde tenemos dos soluciones que describiran el comportamiento de mi sistema bidimensional cerca del punto fijo de la siguiente manera.
 
 ![](imgs/Pasted%20image%2020240919103340.png)
 
@@ -363,13 +324,14 @@ Para tomar como ejemplo, veamos el caso particular donde d=-1.
 ![](imgs/Pasted%20image%2020240919103429.png)
 
 Depende de los valores de a y d, los comportamientos seran similares pero con rotaciones y traslaciones.
+
 ## Clase 10
 
 Desarrollando el determinante de la matriz Jacobiana tenemos que:
 
 ![](imgs/Pasted%20image%2020240919095742.png)
 
-Y si tomamos: 
+Y si tomamos:
 
 $$
 \tau = a+d \qquad {y} \qquad \Delta=ad-cb
@@ -396,21 +358,21 @@ Y los autovalores quedan:
 
 $$
 \begin{align*}
-\lambda_1 = \frac{\tau^2}{2}+\frac{i}{2}\cdot\sqrt{4\Delta -\tau^2} 
-\qquad 
-\lambda_2 = \frac{\tau^2}{2}-\frac{i}{2}\cdot\sqrt{4\Delta -\tau^2} 
-\end{align*} 
+\lambda_1 = \frac{\tau^2}{2}+\frac{i}{2}\cdot\sqrt{4\Delta -\tau^2}
+\qquad
+\lambda_2 = \frac{\tau^2}{2}-\frac{i}{2}\cdot\sqrt{4\Delta -\tau^2}
+\end{align*}
 $$
 
 Y ambos tienen la misma parte real y son complejas conjugadas.
 
 Los pasos a seguir dado un sistema EDO bidimensional es el siguiente:
 
-1. Encontrar los puntos fijos $\overline{x*}$ 
+1. Encontrar los puntos fijos $\overline{x*}$
 2. Linealizar alrededor del punto fijo $\overline{x*}$ , para ello, por **cada punto fijo** hacemos lo siguiente:
-	1. Calcular jacobiano **A** evaluando derivadas parciales en el punto fijo (encontramos una matriz A por cada punto fijo)
-	2. Calcular los autovalores de cada matriz jacobiana A
-	3. Encontrar los autovectores de cada A
+	 1. Calcular jacobiano **A** evaluando derivadas parciales en el punto fijo (encontramos una matriz A por cada punto fijo)
+	 2. Calcular los autovalores de cada matriz jacobiana A
+	 3. Encontrar los autovectores de cada A
 
 Un autovector sera un vector $v$ tal que:
 
@@ -418,14 +380,13 @@ $$
 A\cdot v_1 = \lambda_1 \cdot v_1 \qquad A\cdot v_2 = \lambda_2 \cdot v_2
 $$
 
-Estos autovectores me daran las direcciones en las cuales si yo describo mi sistema, la matriz A sera una matriz **diagonal** (desacople mi sistema). 
+Estos autovectores me daran las direcciones en las cuales si yo describo mi sistema, la matriz A sera una matriz **diagonal** (desacople mi sistema).
 
 Y pasare a tener un sistema de la siguiente forma (ejemplo clase 9)
 
 ![](imgs/Pasted%20image%2020240919102621.png)
 
 ![](imgs/Pasted%20image%2020240919102635.png)
-
 
 Y como es un sistema lineal, la suma de las soluciones tambien es una solución, por lo que puedo escribir:
 
@@ -439,10 +400,10 @@ Que pasa cuando los autovalores son complejos, si  $\tau^2 \lt 4\Delta$:
 
 $$
 \begin{align*}
-\lambda_1 = \frac{\tau^2}{2}+\frac{i}{2}\cdot\sqrt{4\Delta -\tau^2} 
-\qquad 
-\lambda_2 = \frac{\tau^2}{2}-\frac{i}{2}\cdot\sqrt{4\Delta -\tau^2} 
-\end{align*} 
+\lambda_1 = \frac{\tau^2}{2}+\frac{i}{2}\cdot\sqrt{4\Delta -\tau^2}
+\qquad
+\lambda_2 = \frac{\tau^2}{2}-\frac{i}{2}\cdot\sqrt{4\Delta -\tau^2}
+\end{align*}
 $$
 
 Y sean $\alpha = \frac{\tau}{2} \qquad \omega=\frac{\sqrt{4\Delta -\tau^2}}{2}$ , tendre $\lambda_1=\alpha + i\omega \qquad \lambda_2=\alpha - i\omega$
@@ -451,3 +412,4 @@ Luego tendre que si $\omega \neq 0$ entonces mis soluciones seran oscilatorias.
 
 ![](imgs/Pasted%20image%2020240919104652.png)
 
+Si tenemos que alguno de los autovectores es nulo, entonces tenemos una **unica direccion** a donde converge nuestro sistema.
