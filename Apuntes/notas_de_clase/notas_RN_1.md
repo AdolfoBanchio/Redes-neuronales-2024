@@ -327,7 +327,7 @@ Depende de los valores de a y d, los comportamientos seran similares pero con ro
 
 ## Clase 10
 
-Desarrollando el determinante de la matriz Jacobiana tenemos que:
+Desarrollando el determinante de la matriz Jacobiana tenemos que: (a,b,c,d son las derivadas parciales)
 
 ![](imgs/Pasted%20image%2020240919095742.png)
 
@@ -373,6 +373,8 @@ Los pasos a seguir dado un sistema EDO bidimensional es el siguiente:
 	 1. Calcular jacobiano **A** evaluando derivadas parciales en el punto fijo (encontramos una matriz A por cada punto fijo)
 	 2. Calcular los autovalores de cada matriz jacobiana A
 	 3. Encontrar los autovectores de cada A
+3. Diagonalizar el sistema y analizar el punto fijo
+
 
 Un autovector sera un vector $v$ tal que:
 
@@ -413,3 +415,10 @@ Luego tendre que si $\omega \neq 0$ entonces mis soluciones seran oscilatorias.
 ![](imgs/Pasted%20image%2020240919104652.png)
 
 Si tenemos que alguno de los autovectores es nulo, entonces tenemos una **unica direccion** a donde converge nuestro sistema.
+
+## Clase 11
+
+Ejemplos de sistemas de dos ecuaciones y linealizacion
+
+## Clase 12
+
