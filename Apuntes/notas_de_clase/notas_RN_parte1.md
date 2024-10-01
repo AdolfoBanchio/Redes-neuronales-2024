@@ -303,7 +303,7 @@ Ahora queremos encontrar un sistema de coordenadas (rotando y trasladando) que n
 
 ![alt text](Pasted%20image%2020240917211925%201.png)
 
-Encontrar el determinante (y los auto-vectores y auto-valores) me permite poder **diagonalizar** la matriz A de forma que desde ese eje de coordenadas, yo veo que mi sistema se a **desacoplado** es decir no dependen entre si.
+Encontrar el determinante (y los auto-vectores y auto-valores) me permite poder **diagonalizar** la matriz A de forma que desde ese eje de coordenadas mi sistema se a **desacoplado**.
 
 ### Caso particular matriz diagonal
 
