@@ -2,7 +2,7 @@
 
 Un sistema dinámico es cualquier sistema físico cuyo estado evoluciona con el tiempo. En nuestros sistemas existen variables que cambian con el tiempo. Lo que nos interesa es poder modelar como depende la razón de cambio de dichas variables con respecto al tiempo. 
 
-## Ecuacion diferencial ordinaria unidimensional
+## EDOs unidimensionales
 
 $$
 \frac{dx}{dt} = f(x)
@@ -117,3 +117,4 @@ En este caso tenemos que dentro del parentesis $x^2$ toma siempre un valor posit
 
 ## EDOs Bidimensionales
 
+## EDOs Tridimensionales

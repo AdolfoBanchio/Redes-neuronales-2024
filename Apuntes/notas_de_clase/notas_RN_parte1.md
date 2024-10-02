@@ -422,3 +422,4 @@ Ejemplos de sistemas de dos ecuaciones y linealizacion
 
 ## Clase 12
 
+## Clase 13
