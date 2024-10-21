@@ -126,9 +126,11 @@ Para ello luego de cada estimación del error, recalcularemos nuestro $W$ para p
 ## Clase 17
 
 Retomamos el caso de neuronas de salida con función lineal identidad.  Buscamos resolver como minimizar el **error cuadrático medio**.
+![](Pasted%20image%2020241021182757.png)
+Donde :
 ![](Pasted%20image%2020241021120348.png)
 
-Lo unico que pódemos variar dentro de esta función son nuestros valores $w_{ik}$.  Lo variamos hasta tener una configuración de W que nos de un error pequeño.
+Vemos que lo único que podemos variar dentro de esta función son nuestros valores $w_{ik}$.  Lo variamos hasta tener una configuración de W que nos de un error pequeño.
 
 Luego de calcular el error, debo encontrar un nuevo $\overline{w}$ que se dara de la sig forma:
 ![](Pasted%20image%2020241021121611.png)
