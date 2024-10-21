@@ -13,8 +13,9 @@ En gral una neurona tiene el siguiente esquema:
 ![](2024-08-15-19-04-30-image.png)
 
 Donde luego de realizarse la suma ponderada se aplica una **funcion de activación** a dicho resultado. Y esa es la salida de la neurona.
-Algunas funciones de activación
-![](2024-08-15-19-04-17-image.png)
+Algunas funciones de activación:
+
+![g-activación](2024-08-15-19-04-17-image.png)
 
 ### Aprendizaje supervisado
 
@@ -99,9 +100,59 @@ Una actualización del vector $\overline{W}$ implica mostarle todos los elemento
 Para poder encontrar la mejor solución pedimos que:
 ![](Pasted%20image%2020241017210614.png)
 Donde:
+![](Pasted%20image%2020241021105946.png)
+
 ![](Pasted%20image%2020241017210630.png)
 Y esto se llama **REGLA DEL APRENDIZAJE DEL PERCEPTRON**. Y dado un problema **linealmente separable**, esta regla converge a una solución en un numero finito de pasos.
 
+Esto busca que W maximice la distancia mínima entre el hiperplano de separación y los puntos del conjunto de entrenamiento. 
 ## Clase 16
 
 ### Descenso por el gradiente
+Definimos el error o **loss function**: (error cuadratico medio)
+![](Pasted%20image%2020241021111133.png)
+Este error compara las **salidas deseadas** con las **salidas generadas** por nuestro perceptron lineal (en este caso ses simplemente la suma ponderada). La idea es poder minimizar la función de error encontrando un W optimo.
+En este caso tenemos que:
+- $\xi_i^\mu$ : **VALOR DESEADO**
+- $O_i^\mu$: **SALIDA NEURONAL** : $\overline{w}_i .\overline{\xi}$ (pesos . datos entrada)
+
+Puedo calcular el gradiente que es el valor que me dirá hacia que dirección debo moverme para ir hacia el máximo crecimiento. Se calcula haciendo las derivadas de cada función de error por cada $w_{ik}$ 
+![](Pasted%20image%2020241021114255.png)
+
+Como queremos minimizar, nos moveremos en la dirección **contraria** al gradiente. 
+
+Para ello luego de cada estimación del error, recalcularemos nuestro $W$ para poder acercarnos aun mas al mínimo de la función de error. 
+
+## Clase 17
+
+Retomamos el caso de neuronas de salida con función lineal identidad.  Buscamos resolver como minimizar el **error cuadrático medio**.
+![](Pasted%20image%2020241021120348.png)
+
+Lo unico que pódemos variar dentro de esta función son nuestros valores $w_{ik}$.  Lo variamos hasta tener una configuración de W que nos de un error pequeño.
+
+Luego de calcular el error, debo encontrar un nuevo $\overline{w}$ que se dara de la sig forma:
+![](Pasted%20image%2020241021121611.png)
+Luego de calcular el gradiente para un $w_{ik}$ arbitrario, y teniendo una **razon de aprendizaje** $\eta$ . Tengo que 
+![](Pasted%20image%2020241021122106.png)
+donde $d_i^\mu = \xi_i^\mu - O_i^\mu$
+
+Esto solo vale cuando la función de salida de la neurona es la función identidad.
+Y nos permite buscar un mínimo local de una función de muchas variables. En este caso buscamos el mínimo de la función **Error cuadrático medio**.
+
+### Perceptron simple NO LINEAL
+
+![](Pasted%20image%2020241021124421.png)
+
+Para este caso mi error queda dado por 
+![](Pasted%20image%2020241021130308.png)
+Donde $E^1$ es el error cuadrático medio para la neurona de salida $i$ par el primer elemento del conjunto de entrenamiento. Y $O_i^1$ es la función de salida para los datos de entrada del primer elemento del conjunto de entrenamiento.  
+
+Y podemos aplicar le método del descenso por el gradiente usando la misma definicion del **ECM**.
+![](Pasted%20image%2020241021131634.png)
+donde $O_i^\mu=g(h_i^\mu)$. Y podemos calcular cada componente $ik$ del gradiente:
+![](Pasted%20image%2020241021131729.png)
+redefinimos:
+![](Pasted%20image%2020241021131950.png)
+Y el descenso por el gradiente a la sinapsis $W$ queda:
+![](Pasted%20image%2020241021132032.png)
+
