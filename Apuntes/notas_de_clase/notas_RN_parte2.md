@@ -157,4 +157,3 @@ redefinimos:
 ![](Pasted%20image%2020241021131950.png)
 Y el descenso por el gradiente a la sinapsis $W$ queda:
 ![](Pasted%20image%2020241021132032.png)
-
