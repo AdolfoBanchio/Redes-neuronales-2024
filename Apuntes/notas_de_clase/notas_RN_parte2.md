@@ -159,3 +159,98 @@ Y el descenso por el gradiente a la sinapsis $W$ queda:
 ![](Pasted%20image%2020241021132032.png)
 
 
+## Clase 18
+
+El método de **back propagation** es el metodo utilizado para poder entrenar redes neuronales feed-forward con multiples capas ocultas intermedias.
+
+![](Pasted%20image%2020241114113547.png)
+
+A partir de la capa de entrada se calculan los valores de salida de las neuronas intermedias como:
+![](Pasted%20image%2020241114113645.png)
+
+($\overline{w_j}$ son los pesos sinapticos de la neurona intermedia j, y $\overline{\xi^\mu}$ es el vector de las N entradas de la red. )
+
+Y luego de la capa de salida  
+![](Pasted%20image%2020241114113845.png)
+
+Ahora que tengo el valor de salida, puedo calcular el error cuadrático medio para este resultado obtenido, y luego calcular el gradiente para este resultado obtenido para luego aplicar el método del descenso por el gradiente. Dado el ejemplo $\mu$ del conjunto de entrenamiento podemos calcular nuestro ECM.
+![](Pasted%20image%2020241114114043.png)
+
+De esta forma ahora podremos calcular el gradiente y actualizar los pesos sinapticos de atrás hacia adelante. Es decir comenzando por los pesos de la ultima capa oculta con la capa de salida. 
+
+![](Pasted%20image%2020241114114505.png)
+
+![](Pasted%20image%2020241114114522.png)
+
+En una red donde tenemos capas ocultas, nuestros parametros seran:
+$$
+(N\times L)+(L\times M)
+$$
+**¿Cuando actualizamos los pesos?**
+Podemos actualizarlos luego de cada ejemplo del conjunto de entrenamiento, a esto se lo denomina **actualización en linea**. Pero es muy costoso para redes con muchos parámetros y un set muy grande. 
+
+La Otra alternativa es la actualización en lotes (**batches**). Que consiste en actualizar luego de cada **EPOCA**. Osea luego de mostrarle todo el conjunto de entrenamientos.
+
+## clase 19
+
+Generalizamos el metodo de back propagation para un numero arbitrario de capas ocultas. si queremos actualizar los acoplamientos $\overline{w}_{pq}$ entre la capa q (anterior) y p (posterior)
+
+![](Pasted%20image%2020241114124330.png)
+## Clase 20
+
+Redes neuronales como aproximadores universales de funciones sin dar una forma analítica.  
+
+## Clase 21
+
+### Problemas de back-propagation
+Notamos como se reduce la capacidad de aprendizaje a medida que agregamos mas capas ocultas a la red. Porque como utilizamos funciones sigmoideas o relus, estas derivadas son muy pequeñas. Y vemos que a medida que agregamos mas capas, las neuronas mas cercanas a la entrada se ven afectadas por aun mas derivadas, por lo que toman valores cada vez mas pequeños. A esto se lo llama **supresión del gradiente**
+
+![](Pasted%20image%2020241114140141.png)
+
+Algunos problemas:
+- Rugosidad de la funcion: mayor cantidad de parametros, mayor cantidad de maximos y minimos de la funcion de error
+- Valores iniciales de los pesos
+- Dependencia con derivadas (valores muy pequeños hacen que avancemos muy lento)
+- dependencia con la razón de aprendizaje
+- overfitting: la red predice muy bien los elementos del conjunto de entrenamiento pero no responde de forma deseada cuando se le presentan los conjuntos de testeos, por ende no generaliza bien. 
+
+**Mejora para back propagation**
+**Auto encoder**: Entrenamos una red feed forward para que aprenda la funcion identidad, donde tiene la misma cantidad de neuronas de salida como de entrada, y una capa oculta con menor cantidad de neuronas. Una vez que esta red aprenda lo mejor posible la identidad, estos serán nuestros pesos para colocar entre nuestra capa de entrada a primera capa oculta en nuestra red original. Y así vamos generando autoencoders agregandole las capas necesarias para cubrir todas las que tendrá nuestra red feedforward original.
+
+## Clase 22
+
+**Mejora para back propagation**
+- **Minibatch:** dividir el conjunto de entrenamiento en mini grupos, de manera que en cada época se hace una re-asignación aleatoria de todos los ejemplos. Batch mas pequeños atraen el descenso por el gradiente a mínimos mas planos, de modo que es mas fácil escapar de los mínimos locales. 
+- **Dropout**: suprimir un cierto número de neuronas de manera aleatoria por lo que cuando se calcula la salida no se considera toda la información. Neuronas no se tendrán en cuenta con una probabilidad p=0.5, de modo que habrán dimensiones que no serán tenidas en cuenta a la hora de calcular el gradiente, y alguna de estas dimensiones puede ser la que evita salir de un mínimo local. Esto permite reducir el overfitting y que la red responda correctamente a los test. 
+
+**Memoria y adaptación al MDG:** 
+	![](Pasted%20image%2020241114181243.png)
+	Con este parámetro "manejamos" el incremento persistente y pequeño haciendolo próximo a uno para hacer que esos incrementos en zonas planas aun mas grande. Aumenta la velocidad en direcciones de gradiente pequeño.
+	![](Pasted%20image%2020241114204826.png)
+
+Existen métodos adaptativos que busca que cada dimensión del problema tenga su propio criterio en el descenso por el gradiente. 
+![](Pasted%20image%2020241114204928.png)
+Existen diferentes métodos que nos definen como establecer dicho parámetro especifico:
+- ADGRAD
+- ADADELTA
+- RPPROP
+- RMSprop (hinton)
+- ADAM
+Estos ultimos dos metodos, agregan **nuevos** **hiperparametros** a tener en cuenta a la hora de configurar nuestro modelo neuronal. 
+
+## Clase 23
+
+**Regularizaciones**: consiste en agregar un termino adicional a la función de error. 
+![](Pasted%20image%2020241114180837.png)
+
+Existen dos tipos de regularización conocidos. L1 y L2.
+
+![](Pasted%20image%2020241114180923.png)
+Donde acá $\lambda$ es nuestro nuevo hiperparametro.
+
+### Reemplazo de la función ECM por otra función de error
+**Cross Entropy**: 
+Se basa en primero obtener el mínimo número de bits por segundo para representar información (**razón de entropía H**). Y el número máximo de bits por unidad de tiempo que puede transferirse con confianza en la presencia de ruido (**capacidad de información C**). Se puede enviar información a menos que H < C.
+
+### Problema de la regresión polinomial
+## Clase 24
