@@ -17,10 +17,14 @@ import scipy.linalg as linalg
 import json
 from collections import defaultdict
 from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor, as_completed, ThreadPoolExecutor
 import copy 
+import logging
+
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def train_model(params, t_dataset, v_dataset):
+    logging.debug(f"Starting training with params: {params}")
     """ 
     Trains and verifies a fashion_mnist classifier model with the given parameters
 
@@ -65,53 +69,45 @@ train_configurations = {
         "dropout": 0.2,
         "n1": 128,
         "n2": 64,
-        "epochs": 5,
+        "epochs": 30,
         "batches_size": 100
     },
     "conf_2": {
-        "learning_rate": 1e-2,
-        "dropout": 0.5,
-        "n1": 256,
-        "n2": 128,
-        "epochs": 10,
+        "learning_rate": 1e-3,
+        "dropout": 0.2,
+        "n1": 128,
+        "n2": 64,
+        "epochs": 40,
         "batches_size": 100
     },
     "conf_3": {
-        "learning_rate": 5e-4,
-        "dropout": 0.3,
-        "n1": 64,
-        "n2": 31,
-        "epochs": 15,
+        "learning_rate": 1e-3,
+        "dropout": 0.5,
+        "n1": 128,
+        "n2": 64,
+        "epochs": 50,
         "batches_size": 100
     }
 }
 
-# train the 3 different configurations in parallel
-models = {}
-results = {}
+# train the 3 different configurations
+for conf_name, conf_params in train_configurations.items():
+    print(f"Training configuration: {conf_name}")
+    print(f"Parameters: {conf_params}")
+    
+    model, train_loss_inc, train_loss, valid_loss, train_acc_inc, train_acc, valid_acc = train_model(conf_params, fashion_dataset, validation_dataset)
 
-with ThreadPoolExecutor(max_workers=3) as executor:
-    futures = {executor.submit(train_model, params, fashion_dataset, validation_dataset): name for name, params in train_configurations.items()}
-    for future in as_completed(futures):
-        name = futures[future]
-        try:
-            model, train_loss, train_accuracy, valid_loss, valid_accuracy = future.result()
-            models[name] = model
-            results[name] = {
-                "params": train_configurations[name],
-                "train_loss": train_loss,
-                "train_accuracy": train_accuracy,
-                "valid_loss": valid_loss,
-                "valid_accuracy": valid_accuracy
-            }
-        except Exception as e:
-            print(f"Configuration {name} failed with error: {e}")
-        
-        # save the results
-        model_path = f"./models/{name}_model.pth"
-        torch.save(model, model_path)
-
-        results_path = f"./results/{name}_results.json"
-        with open(results_path, 'w') as f:
-            json.dump(results[name], f)
-
+    # save the model and the results
+    model_path = f"./models/{conf_name}.pt"
+    torch.save(model, model_path)
+    results = {
+        "train_loss_inc": train_loss_inc,
+        "train_loss": train_loss,
+        "valid_loss": valid_loss,
+        "train_acc_inc": train_acc_inc,
+        "train_acc": train_acc,
+        "valid_acc": valid_acc
+    }
+    results_path = f"./results/{conf_name}_results.json"
+    with open(results_path, 'w') as f:
+        json.dump(results, f)
